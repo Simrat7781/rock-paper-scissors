@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Paper Scissors - Fun Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>🎉 Rock Paper Scissors 🎉</h1>
+
+    <div id="name-inputs" class="name-inputs">
+      <label>
+        Player 1 Name: 
+        <input type="text" id="player1-name" placeholder="e.g. Alice" />
+      </label>
+      <label>
+        Player 2 Name: 
+        <input type="text" id="player2-name" placeholder="e.g. Bob" />
+      </label>
+      <button id="start-game" onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game-area" style="display:none;">
+      <div class="scoreboard">
+        <div><span id="player1-display">Player 1</span>: <span id="score1">0</span> 🧸</div>
+        <div><span id="player2-display">Player 2</span>: <span id="score2">0</span> 🐻</div>
+      </div>
+
+      <div id="player-turn" class="player-turn">Player 1, choose your move:</div>
+
+      <div class="choices">
+        <button class="choice" onclick="makeChoice('rock')">
+          ✊ <span>Rock</span>
+        </button>
+        <button class="choice" onclick="makeChoice('paper')">
+          ✋ <span>Paper</span>
+        </button>
+        <button class="choice" onclick="makeChoice('scissors')">
+          ✌️ <span>Scissors</span>
+        </button>
+      </div>
+
+      <div class="results">
+        <p id="player1-choice">Player 1: -</p>
+        <p id="player2-choice">Player 2: -</p>
+        <h2 id="winner">Make your moves!</h2>
+      </div>
+
+      <button class="reset" onclick="resetGame()">🔄 Reset Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
