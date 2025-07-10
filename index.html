@@ -3,21 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rock Paper Scissors - Fun Edition</title>
+  <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
 
+    <div class="theme-buttons">
+      <button class="theme-btn" onclick="setTheme('cricket')">🏏 Cricket Field</button>
+      <button class="theme-btn" onclick="setTheme('nature')">🌿 Nature</button>
+      <button class="theme-btn" onclick="setTheme('classic')">🍇 Classic</button>
+      <button class="theme-btn" onclick="setTheme('dark')">🌀 Dark</button>
+    </div>
+
     <h1>🎉 Rock Paper Scissors 🎉</h1>
 
     <div id="name-inputs" class="name-inputs">
       <label>
-        Player 1 Name: 
+        Player 1 Name:
         <input type="text" id="player1-name" placeholder="e.g. Alice" />
       </label>
       <label>
-        Player 2 Name: 
+        <input type="checkbox" id="vs-computer" /> Play against Computer (AI)
+      </label>
+      <label id="player2-label">
+        Player 2 Name:
         <input type="text" id="player2-name" placeholder="e.g. Bob" />
       </label>
       <button id="start-game" onclick="startGame()">Start Game</button>
@@ -32,15 +42,9 @@
       <div id="player-turn" class="player-turn">Player 1, choose your move:</div>
 
       <div class="choices">
-        <button class="choice" onclick="makeChoice('rock')">
-          ✊ <span>Rock</span>
-        </button>
-        <button class="choice" onclick="makeChoice('paper')">
-          ✋ <span>Paper</span>
-        </button>
-        <button class="choice" onclick="makeChoice('scissors')">
-          ✌️ <span>Scissors</span>
-        </button>
+        <button class="choice" onclick="makeChoice('rock')">✊ <span>Rock</span></button>
+        <button class="choice" onclick="makeChoice('paper')">✋ <span>Paper</span></button>
+        <button class="choice" onclick="makeChoice('scissors')">✌️ <span>Scissors</span></button>
       </div>
 
       <div class="results">
@@ -49,9 +53,14 @@
         <h2 id="winner">Make your moves!</h2>
       </div>
 
-      <button class="reset" onclick="resetGame()">🔄 Reset Game</button>
+      <button class="reset" onclick="resetGame()">🔁 Reset Game</button>
     </div>
   </div>
+
+  <!-- Sound effects -->
+  <audio id="click-sound" src="https://www.soundjay.com/buttons/sounds/button-29.mp3"></audio>
+  <audio id="win-sound" src="https://www.soundjay.com/human/sounds/applause-01.mp3"></audio>
+  <audio id="draw-sound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
 
   <script src="script.js"></script>
 </body>
