@@ -3,34 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rock Paper Scissors</title>
+  <title>Rock Paper Scissors 🧸</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
 
-    <div class="theme-buttons">
-      <button class="theme-btn" onclick="setTheme('cricket')">🏏 Cricket Field</button>
-      <button class="theme-btn" onclick="setTheme('nature')">🌿 Nature</button>
-      <button class="theme-btn" onclick="setTheme('classic')">🍇 Classic</button>
-      <button class="theme-btn" onclick="setTheme('dark')">🌀 Dark</button>
-    </div>
-
-    <h1>🎉 Rock Paper Scissors 🎉</h1>
+    <h1>🧸 Let's Play Rock, Paper, Scissors! ✋✊✌️</h1>
 
     <div id="name-inputs" class="name-inputs">
       <label>
-        Player 1 Name:
+        My Name:
         <input type="text" id="player1-name" placeholder="e.g. Alice" />
       </label>
       <label>
-        <input type="checkbox" id="vs-computer" /> Play against Computer (AI)
+        <input type="checkbox" id="vs-computer" /> Play with Computer 🤖
       </label>
       <label id="player2-label">
-        Player 2 Name:
+        Friend's Name:
         <input type="text" id="player2-name" placeholder="e.g. Bob" />
       </label>
-      <button id="start-game" onclick="startGame()">Start Game</button>
+      <button id="start-game" onclick="startGame()">🎈 Start!</button>
     </div>
 
     <div id="game-area" style="display:none;">
@@ -39,7 +32,7 @@
         <div><span id="player2-display">Player 2</span>: <span id="score2">0</span> 🐻</div>
       </div>
 
-      <div id="player-turn" class="player-turn">Player 1, choose your move:</div>
+      <div id="player-turn" class="player-turn">Your turn!</div>
 
       <div class="choices">
         <button class="choice" onclick="makeChoice('rock')">✊ <span>Rock</span></button>
@@ -48,12 +41,12 @@
       </div>
 
       <div class="results">
-        <p id="player1-choice">Player 1: -</p>
-        <p id="player2-choice">Player 2: -</p>
-        <h2 id="winner">Make your moves!</h2>
+        <p id="player1-choice">You: -</p>
+        <p id="player2-choice">Friend: -</p>
+        <h2 id="winner">Let's go!</h2>
       </div>
 
-      <button class="reset" onclick="resetGame()">🔁 Reset Game</button>
+      <button class="reset" onclick="resetGame()">🔁 Play Again</button>
     </div>
   </div>
 
