@@ -5,175 +5,97 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  color: #2e4d2c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  font-family: Comic Sans MS, cursive, sans-serif;
+  background-color: #fff5e1;
+  color: #333;
   text-align: center;
-  background-image: url('https://images.unsplash.com/photo-1594224642624-d17d3f3f54e3'); /* 🏏 cricket ground */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background 0.5s ease;
+  padding: 20px;
 }
 
-
 .container {
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #4b6043;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffefd5;
   border-radius: 20px;
-  padding: 30px;
-  max-width: 450px;
-  width: 100%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border: 5px dashed #ff69b4;
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-}
-
-.theme-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.theme-btn {
-  background-color: #4b6043;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.theme-btn:hover {
-  background-color: #365232;
-  transform: scale(1.05);
+  color: #ff1493;
 }
 
 .name-inputs label {
   display: block;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-.name-inputs input {
-  margin-left: 10px;
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 1px solid #4b6043;
-  font-size: 1rem;
-  width: 60%;
-}
-
-#start-game {
-  background-color: #4b6043;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-#start-game:hover {
-  background-color: #2e4d2c;
-}
-
-.scoreboard {
-  display: flex;
-  justify-content: space-around;
+  margin: 10px 0;
   font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
 }
 
-.player-turn {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ffa07a;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ffb6c1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff69b4;
 }
 
 .choices {
-  display: flex;
-  justify-content: space-around;
-  gap: 15px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .choice {
-  background: #a3c6a3;
-  border: 2px solid #4b6043;
-  padding: 15px 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 1.4rem;
-  transition: transform 0.2s ease;
-  flex: 1 1 30%;
-  user-select: none;
+  font-size: 2rem;
+  background-color: #87cefa;
+  border: 3px solid #4682b4;
 }
 
 .choice:hover {
-  background-color: #8db98d;
-  transform: scale(1.05);
+  background-color: #add8e6;
 }
 
-.choice span {
-  display: block;
-  margin-top: 5px;
-  font-size: 1rem;
+.scoreboard {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
 }
 
-.results {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  min-height: 65px;
+.results p, .results h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.player-turn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff4500;
 }
 
 .reset {
-  background: #3b4d2a;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
+  background-color: #ffa07a;
 }
 
-.reset:hover {
-  background-color: #2e4d2c;
-}
-
-@media (max-width: 480px) {
-  .choice {
-    flex: 1 1 100%;
-  }
-
-  .scoreboard {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .name-inputs input {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 5px;
-  }
-}
-/* Win animation */
 .winner-flash {
-  animation: flashWin 1s ease;
+  animation: flash 0.5s ease-in-out 3;
 }
 
-@keyframes flashWin {
-  0%, 100% { color: #2e4d2c; transform: scale(1); }
-  50% { color: #00c853; transform: scale(1.2); }
+@keyframes flash {
+  0% { background-color: #fff; }
+  50% { background-color: #ffff99; }
+  100% { background-color: #fff; }
 }
